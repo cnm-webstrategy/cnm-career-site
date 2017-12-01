@@ -1,0 +1,65 @@
+/*      These are the styles to override the default CSOD styles that are terrible.     */
+#mainContainer {
+	padding: 0px !important;
+}
+
+.careerSite {
+	min-width: 0 !important;
+	padding: 0 0 !important;
+	margin: 0 0 !important;
+}
+
+.widgetDropped {
+	margin: 0 0 !important;
+}
+
+/* search widget multiselect input width fix */
+@media (min-width: 768px){
+	.ui-multiselect-menu{
+		width: 208px !important;
+	}
+}
+
+@media (max-width: 767px){
+	.ui-multiselect-menu {
+		width: 90vw !important;
+	}
+}
+
+#ctl00_careerSiteHeader_lnkLogOut {
+	position:relative;
+	float:right;
+	top:2px;
+	color:white !important;
+	font-weight:bold;
+}
+
+#ctl00_careerSiteHeader_lnkMyProfile{
+	color:white !important;
+	font-weight:bold;
+	margin-left:5px;
+}
+
+#ctl00_careerSiteHeader_lblWelcomeUser{
+	color:white;
+}
+
+.userBar {
+	position:absolute;
+	top: 0px;
+	right:20px;
+	font-weight:bold;
+}
+
+#___________if__h_dd{
+	width:150px;
+}
+#___________if__h_dd_item_1{
+	width:100% !important;
+}
+#___________if__h_dd_item_2{
+	width:100% !important;
+}
+#___________if__h_dd_item_3{
+	width:100% !important;
+}

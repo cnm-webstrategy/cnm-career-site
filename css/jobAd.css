@@ -1,0 +1,54 @@
+.cs-atscs-jobdet-rtpane {
+    padding: 0 60px;
+}
+
+.cs-atscs-jobdet-rtpane h2 {
+	font-size: 4.33rem;
+	border-bottom: 1px solid #ba0c2f;
+}
+
+.cs-atscs-jobdet-ltpane {
+	display: none;
+}
+
+
+#apply-now {
+	width: 40% !important;
+    border-radius: 0px;
+}
+
+#apply-now-container {
+	padding: 20px;
+    text-align: center;
+}
+
+#apply-to-unm {
+	display: none;
+}
+
+#unm_hej-di-email{
+	color:white;
+}
+
+
+@media only screen and (max-width : 767px) {
+	.cs-atscs-jobdet-rtpane {
+	    padding: 0 30px;
+	}
+	#apply-now-container {
+	   background-color: rgba(0,0,0,.67);  
+	   padding: 0.5rem 4rem;
+	   margin-top: 1rem;
+  }
+}
+
+@media print {
+	.header-container{
+		display:none;
+	}
+	
+	.careerSiteFooter{
+		display:none;
+	}
+}
+

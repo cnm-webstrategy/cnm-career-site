@@ -1,0 +1,46 @@
+/*    Tiles       */
+
+.btn-ea {  
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  /* height: 300px; */
+  border:10px solid #FFFFFF;
+  filter: grayscale(0.7);
+  } 
+
+.btn-ea h2 {
+  padding-top: 20px;
+}
+
+.btn-ea:hover{
+/* z-index: 99;
+  height: 220px; */
+  text-shadow: 1px 1px rgba(0,0,0, 0.5);
+  filter: grayscale(0);
+}
+
+.btn-ea:hover h2 {
+  font-weight: bolder;
+
+}
+
+.btn-ea-staff {
+  background-image: url('../img/1.jpg');
+
+}
+
+.btn-ea-faculty {
+  background-image: url('../img/2.jpg');
+
+}
+
+.btn-ea-student {
+  background-image: url('../img/3.jpg');
+
+}
+
+.btn-ea-unmtemps {
+  background-image: url('../img/4.jpg');
+
+}
