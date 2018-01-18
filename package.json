@@ -1,0 +1,24 @@
+{
+  "name": "unmjobs-careersite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.cnm.edu:EAS/unmjobs-careersite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^7.2.4",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.4.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.8",
+    "path": "^0.12.7"
+  }
+}

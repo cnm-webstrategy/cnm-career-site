@@ -1,0 +1,125 @@
+@cnm-dark-blue:     #003A70;
+@cnm-md-blue:       #0257A8;
+@cnm-gold:          #F6BE00;
+
+* {
+  box-sizing: border-box;
+}
+
+.cover {
+  //padding: 30px 15px;
+  //margin-bottom: 30px;
+  //color: inherit;
+  //background-color: #eeeeee;
+  //margin-bottom: 0px !important;
+  //padding: 0px 0px;
+  //background-color: transparent;
+  //overflow: hidden;
+  //min-height: 100%;
+}
+.flex {
+  display: flex;
+}
+.cover  {
+  background-image: url(../new-mexico.jpg); ///clientimg/cnm/careersite/new-mexico.jpg
+  min-height: 420px;
+  height: 100%;
+  font-size: 22px;
+  a {
+    font-size: 22px;
+  }
+  
+  .flex {
+    margin: 0 auto;
+    height: 100%;
+    width: 70vw;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+    > div {
+      flex: 1 0 50%;
+    }
+  
+    .employee-login {
+      height: 100%;
+      max-height: 260px;
+      min-height: 260px;
+      font-size: 16px;
+      
+      .header {
+        background-color: @cnm-md-blue;
+        color: white;
+        padding: 5px 5px 5px 10px;
+      }
+      span {
+        display: block;
+        padding: 5px 10px;
+      }
+      
+      a {
+        padding: 50px;
+        min-height: 260px;
+        width: 100%;
+        display: inline-block;
+        background-color: @cnm-gold;
+        color: @cnm-dark-blue;
+        font-family: sans-serif;
+        text-decoration: none;
+        line-height: 22px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .links {
+      font-family: sans-serif;
+      h1 {
+        color: white;
+      }
+      ul {
+        margin: 0;
+        height: 260px;
+        padding: 50px;
+        background-color: @cnm-dark-blue;
+        list-style: none;
+        line-height: 32px;
+        
+        li {
+          a {
+            color: white;
+            text-decoration: none;
+            &:hover {
+              text-decoration: underline;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+    #help-link {
+      flex: 1 0 100%;
+      a {
+        margin-left: 50%;
+      }
+    }
+  }
+}
+.positions {
+  .flex {
+    .staff {
+      margin-left: auto;
+    }
+    .faculty {
+      margin-right: auto;
+
+    }
+  }
+}
+.hamburger-menu {
+  width: 100vw;
+  background: #ffffff;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #dddddd;
+  display: inline-block;
+}

@@ -1,0 +1,106 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.cover {
+  background-image: url(../new-mexico.jpg);
+  min-height: 420px;
+  height: 100%;
+  font-size: 22px;
+}
+.cover a {
+  font-size: 22px;
+}
+.cover .flex {
+  margin: 0 auto;
+  height: 100%;
+  width: 70vw;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.cover .flex > div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+}
+.cover .flex .employee-login {
+  height: 100%;
+  max-height: 260px;
+  min-height: 260px;
+  font-size: 16px;
+}
+.cover .flex .employee-login .header {
+  background-color: #0257A8;
+  color: white;
+  padding: 5px 5px 5px 10px;
+}
+.cover .flex .employee-login span {
+  display: block;
+  padding: 5px 10px;
+}
+.cover .flex .employee-login a {
+  padding: 50px;
+  min-height: 260px;
+  width: 100%;
+  display: inline-block;
+  background-color: #F6BE00;
+  color: #003A70;
+  font-family: sans-serif;
+  text-decoration: none;
+  line-height: 22px;
+}
+.cover .flex .employee-login a:hover {
+  text-decoration: underline;
+}
+.cover .flex .links {
+  font-family: sans-serif;
+}
+.cover .flex .links h1 {
+  color: white;
+}
+.cover .flex .links ul {
+  margin: 0;
+  height: 260px;
+  padding: 50px;
+  background-color: #003A70;
+  list-style: none;
+  line-height: 32px;
+}
+.cover .flex .links ul li a {
+  color: white;
+  text-decoration: none;
+}
+.cover .flex .links ul li a:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+.cover .flex #help-link {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100%;
+          flex: 1 0 100%;
+}
+.cover .flex #help-link a {
+  margin-left: 50%;
+}
+.positions .flex .staff {
+  margin-left: auto;
+}
+.positions .flex .faculty {
+  margin-right: auto;
+}
+.hamburger-menu {
+  width: 100vw;
+  background: #ffffff;
+  height: 60px;
+  line-height: 60px;
+  border-bottom: 1px solid #dddddd;
+  display: inline-block;
+}
