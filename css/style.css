@@ -9,9 +9,18 @@
 }
 .cover {
   background-image: url(../new-mexico.jpg);
+  /* /clientimg/cnm/careersite/new-mexico.jpg */
   min-height: 420px;
   height: 100%;
   font-size: 22px;
+}
+.cover * {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.cover h1 {
+  color: white;
+  text-shadow: 0px 0px 5px #191919;
 }
 .cover a {
   font-size: 22px;
@@ -37,27 +46,30 @@
   min-height: 260px;
   font-size: 16px;
 }
-.cover .flex .employee-login .header {
-  background-color: #0257A8;
-  color: white;
-  padding: 5px 5px 5px 10px;
-}
-.cover .flex .employee-login span {
-  display: block;
-  padding: 5px 10px;
-}
-.cover .flex .employee-login a {
+.cover .flex .employee-login .employee-wrapper {
   padding: 50px;
   min-height: 260px;
   width: 100%;
   display: inline-block;
   background-color: #F6BE00;
-  color: #003A70;
   font-family: sans-serif;
-  text-decoration: none;
+  font-size: 22px;
   line-height: 22px;
 }
-.cover .flex .employee-login a:hover {
+.cover .flex .employee-login .employee-wrapper .header {
+  background-color: #0257A8;
+  color: white;
+  padding: 5px 5px 5px 10px;
+}
+.cover .flex .employee-login .employee-wrapper span {
+  display: block;
+  padding: 5px 10px;
+}
+.cover .flex .employee-login .employee-wrapper a {
+  text-decoration: none;
+  color: #003A70;
+}
+.cover .flex .employee-login .employee-wrapper a:hover {
   text-decoration: underline;
 }
 .cover .flex .links {
@@ -72,7 +84,7 @@
   padding: 50px;
   background-color: #003A70;
   list-style: none;
-  line-height: 32px;
+  line-height: 26px;
 }
 .cover .flex .links ul li a {
   color: white;
@@ -88,6 +100,8 @@
           flex: 1 0 100%;
 }
 .cover .flex #help-link a {
+  color: white;
+  text-shadow: 0px 0px 5px #191919;
   margin-left: 50%;
 }
 .positions .flex .staff {
