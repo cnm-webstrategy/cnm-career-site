@@ -12,15 +12,12 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 		$.getScript('https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', function() {
 			$("#content").html('');
 			console.log("get script");
-            // $.getScript('https://cnm.edu/ext/cornerstone_resources/hello-world.js', function() {
-            //     console.log('hello world script');
-            // });
 		});
 		 $("#content").html('');
 	  });
 
 	//load job ad css
-    $(".careerSiteContainer").append('<link rel="stylesheet" type="text/css" href="https://cnm.edu/ext/cornerstone_resources/style.css">');
+	$("#ctl00_careerSiteHeader_htmlContainer").append('<link rel="stylesheet" type="text/css" href="https://cnm.edu/ext/cornerstone_resources/style.css">');
 
 
 	$( document ).ready(function() {	
@@ -28,8 +25,8 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 		//The csod login script requires the button to be present in the dom so it can trigger a click.
 		$(".cs-atscs-jobdet-ltpane").hide();
 
-		//insert the apply button and modal html (empty div should exist in the footer; #apply-to-unm in this case)
-		$("#apply-to-unm").append('<div id="apply-now-button-placeholder">\
+		//insert the apply button and modal html (empty div should exist in the footer; #apply-to-cnm in this case)
+		$("#apply-to-cnm").append('<div id="apply-now-button-placeholder">\
 		<div id="apply-now-container">\
 			<div class="row">\
 			  <div class="col-md-12">\
@@ -37,30 +34,30 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 			  </div>\
 			</div>\
 		</div>\
-		<div class="unm-modal fade" tabindex="-1" role="dialog" aria-labelledby="apply-now-modal" id="apply-now-modal" style="display: none;" aria-hidden="true">\
-			<div class="unm-modal-dialog" role="document">\
-			  <div class="unm-modal-content">\
-				<div class="unm-modal-header">\
-				  <h5 class="unm-modal-title" id="apply-now-modal">Select one: </h5>\
+		<div class="cnm-modal fade" tabindex="-1" role="dialog" aria-labelledby="apply-now-modal" id="apply-now-modal" style="display: none;" aria-hidden="true">\
+			<div class="cnm-modal-dialog" role="document">\
+			  <div class="cnm-modal-content">\
+				<div class="cnm-modal-header">\
+				  <h5 class="cnm-modal-title" id="apply-now-modal">Select one: </h5>\
 				  <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">×</span> </button>\
 				</div>\
-				<div class="unm-modal-body">\
+				<div class="cnm-modal-body">\
 				<ul class="list-group">\
 				  <li class="list-group-item d-flex justify-content-between align-items-center">\
-					<label id="unm-student"><input type="radio"  name="applicant-type" value="unm-student" data-login="sso"> I am a current UNM Student</label>\
+					<label id="cnm-student"><input type="radio"  name="applicant-type" value="cnm-student" data-login="sso"> I am a current CNM Student</label>\
 				  </li>\
 				  <li class="list-group-item d-flex justify-content-between align-items-center">\
-					<label><input type="radio" name="applicant-type" value="never-worked-at-unm" data-login="csod"> I have never worked at UNM</label>\
+					<label><input type="radio" name="applicant-type" value="never-worked-at-cnm" data-login="csod"> I have never worked at CNM</label>\
 				  </li>\
 				  <li class="list-group-item d-flex justify-content-between align-items-center">\
-					<label id="unm-staff"><input type="radio" name="applicant-type" value="unm-staff" data-login="sso"> I am a current UNM Faculty or Staff, or a Retiree</label>\
+					<label id="cnm-staff"><input type="radio" name="applicant-type" value="cnm-staff" data-login="sso"> I am a current CNM Faculty or Staff, or a Retiree</label>\
 				  </li>\
 				  <li class="list-group-item d-flex justify-content-between align-items-center">\
-					<label><input type="radio" name="applicant-type" value="former-staff-faculty-student-emp" data-login="csod"> I am a former UNM Faculty or Staff</label>\
+					<label><input type="radio" name="applicant-type" value="former-staff-faculty-student-emp" data-login="csod"> I am a former CNM Faculty or Staff</label>\
 				  </li>\
 				</ul>\
 				</div>\
-				<div class="unm-modal-footer">\
+				<div class="cnm-modal-footer">\
 				  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\
 				  <button type="button" class="btn btn-primary" id="modal-continue-btn">Continue</button>\
 				</div>\
@@ -73,21 +70,22 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 		var apply_now_form = {
 			
 			get ENV () {
-				return window.location.host.split(".")[0]; //unm-pilot is pilot, unm-stg is staging, unm is production
+				return window.location.host.split(".")[0]; //cnm-pilot is pilot, cnm-stg is staging, cnm is production
 			},
 
 			get relayStateURL () {
 			   return 'https%253A%252F%252F'+this.ENV+'.csod.com%252FEPM%252FCareerCenter%252FCareerCenter.aspx%253FreqID%253D'+ ReqID;
 			},
 
-			get UNMSSOIDP () {
-				return 'https://loboauth.unm.edu/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252F'+this.ENV+'.csod.com%26RelayState%3D'+this.relayStateURL;
+			get CNMSSOIDP () {
+				// return 'https://loboauth.cnm.edu/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252F'+this.ENV+'.csod.com%26RelayState%3D'+this.relayStateURL;
+				return 'https://<portalname>.csod.com/samldefault.aspx?ouid=3&returnUrl= ';
 			},
 
 			//uses above functions to send user to Single Sign On page with the appropriate relay state URL to apply for this position in the Career Center
 			sso : function() {
-				console.log('go to UNMSSO: ' + this.UNMSSOIDP);
-				window.location.href = this.UNMSSOIDP;
+				console.log('go to CNMSSO: ' + this.CNMSSOIDP);
+				window.location.href = this.CNMSSOIDP;
 			},
 
 			//clicks on the apply/continue application button to send user to external application
@@ -114,7 +112,7 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 		});
 
 		//Display apply button AFTER the content and event listers have loaded (hidden in css by default)
-		$("#apply-to-unm").css("display", "block");
+		$("#apply-to-cnm").css("display", "block");
 
 	});
 } 

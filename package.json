@@ -14,11 +14,15 @@
   "license": "ISC",
   "dependencies": {
     "autoprefixer": "^7.2.4",
+    "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "gulp-less": "^3.4.0",
     "gulp-postcss": "^7.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-util": "^3.0.8",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "gulp-ssh": "^0.6.2"
   }
 }

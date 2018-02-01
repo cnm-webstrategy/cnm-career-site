@@ -13,44 +13,85 @@
                     <div class="header">Are you...</div>
                     <span>
                         <strong>
-                            <a href="#">A Current CNM Employee?</a><br>
-                            <a href="#">A Current Student Employee or Former CNM Employee?<br>
-                            A New Applicant to CNM?</a>
+                            <a href="https://cnm.csod.com/samldefault.aspx?ouid=3">A Current CNM Employee?</a><br>
+                            <a href="https://cnm.csod.com/ats/careersite/search.aspx?site=7&c=cnm">A Current Student Employee or Former CNM Employee?</a><br>
+                            <a href="https://cnm.csod.com/ats/careersite/search.aspx?site=7&c=cnm">A New Applicant to CNM?</a>
                         </strong>
                     </span>
                 </span>
-                <!--
-    <p class="alert alert-danger alert-UNMinternal">WE ARE CURRENTLY EXPERIENCING TECHNICAL DIFFICULTIES FOR INTERNAL LOGINS</p>-->
+            <!--
+<p class="alert alert-danger alert-CNMinternal">WE ARE CURRENTLY EXPERIENCING TECHNICAL DIFFICULTIES FOR INTERNAL LOGINS</p>-->
         </div>
         <div class="links">
             <h1 class="">I would like to...</h1>
             <ul class="">
                 <li>
-                    <a href="https://unm.csod.com/ats/careersite/search.aspx?site=14#staff">Search for a Job</a></li>
+                    <a href="https://cnm.csod.com/ats/careersite/search.aspx?site=7&c=cnm">Search for a Job</a></li>
                 <li>
-                    <a href="https://unm.csod.com/ats/careersite/ds.aspx?routename=ATS/CareerSite/MyProfile&amp;site=13">Check on my Application</a></li>
+                    <a href="https://cnm.csod.com/ATS/careersite/ds.aspx?routename=ATS/CareerSite/MyProfile">Check on my
+                        Application</a></li>
                 <li>
-                    <a href="https://unm.csod.com/ats/careersite/ds.aspx?routename=ATS/CareerSite/MyProfile&amp;site=13">Sign my Offer Letter</a></li>
+                    <a href="https://cnm.csod.com/ats/careersite/ds.aspx?routename=ATS/CareerSite/MyProfile&amp;site=13">Sign
+                        my Offer Letter</a></li>
                 <li>
-                    <a href="https://unm.csod.com/client/unm/default.aspx">Complete Onboarding Tasks</a></li>
+                    <a href="https://cnm.csod.com/client/cnm/default.aspx">Complete Onboarding Tasks</a></li>
             </ul>
 
         </div>
         <div id="help-link">
-            <h3 ><a href="https://google.com">Need Help?</a></h3>
+            <h3><a href="https://google.com">Need Help?</a></h3>
         </div>
     </div>
 
 </section>
 
 <section class="positions">
-   <div class="flex">
-        <a class="staff" href="https://cnm.csod.com/ats/careersite/search.aspx?site=5&c=cnm "><img src="Staff-Positions-Hyperlinked.png" alt="" style=""></a>
-        <a class="faculty" href="https://cnm.csod.com/ats/careersite/search.aspx?site=1&c=cnm"><img src="faculty-members-callout.png" alt="" style=""></a>
-   </div>
+    <div class="flex">
+        <a class="staff" href="https://cnm.csod.com/ats/careersite/search.aspx?site=5&c=cnm "><img
+                src="Staff-Positions-Hyperlinked.png" alt="" style=""></a>
+        <a class="faculty" href="https://cnm.csod.com/ats/careersite/search.aspx?site=1&c=cnm"><img
+                src="faculty-members-callout.png" alt="" style=""></a>
+    </div>
 </section>
 <!--<img src="/clientimg/cnm/welcome/Staff%20Positions%20Hyperlinked.png" alt="" style="">-->
 <!--<img src="/clientimg/cnm/welcome/faculty-members-callout%20(002).png" alt="" style="">-->
+
+<div class="cnm-modal fade in" tabindex="-1" role="dialog" aria-labelledby="apply-now-modal" id="apply-now-modal"
+     style="display: block;" aria-hidden="false">
+    <div class="cnm-modal-dialog" role="document">
+        <div class="cnm-modal-content">
+            <div class="cnm-modal-header"><h5 class="cnm-modal-title" id="apply-now-modal">Select one: </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>
+            </div>
+            <div class="cnm-modal-body">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center"><label
+                            id="cnm-student"><input type="radio" name="applicant-type" value="cnm-student"
+                                                    data-login="sso"> I am a current CNM Student</label></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center"><label><input
+                            type="radio" name="applicant-type" value="never-worked-at-cnm" data-login="csod"> I have
+                        never worked at CNM</label></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center"><label id="cnm-staff"><input
+                            type="radio" name="applicant-type" value="cnm-staff" data-login="sso"> I am a current CNM
+                        Faculty or Staff, or a Retiree</label></li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center"><label><input
+                            type="radio" name="applicant-type" value="former-staff-faculty-student-emp"
+                            data-login="csod"> I am a former CNM Faculty or Staff</label></li>
+                </ul>
+            </div>
+            <div class="cnm-modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="modal-continue-btn">Continue</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var button = document.getElementById("ctl00_siteContent_csApplyNow");
+    console.log(button);
+</script>
 
 </body>
 </html>
