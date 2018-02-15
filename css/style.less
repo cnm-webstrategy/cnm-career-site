@@ -21,9 +21,17 @@
 .flex {
   display: flex;
 }
+
+.cover-container {
+  width: 100%;
+}
 section.cover  {
   * {
     box-sizing: border-box;
+  }
+  
+  @media screen and (min-width: 768px) {
+    width: 100%;
   }
   
   background-image: url(https://cnm.csod.com/clientimg/cnm/careersite/RPM_dusk-tiltshift.jpg);
@@ -39,43 +47,76 @@ section.cover  {
     text-shadow: 0px 0px 5px rgba(25, 25, 25, 1);
   }
   a {
-    font-size: 22px;
+    font-size: ~"calc(16px + .3vw)";
     font-family: inherit;
   }
-  ul, ol {
+  ul,
+  ol {
     margin-top: 0;
     margin-bottom: 10px;
+    list-style-type: none;
+    li {
+      padding-left: 10px;
+      a {
+    
+      }
+    }
+
   }
   
   .flex {
     margin: 0 auto;
     height: 100%;
-    width: 70vw;
+    width: 100%;
     align-items: flex-end;
     flex-wrap: wrap;
-    
+    line-height: 32px;
+    flex-direction: column;
+    width: 70vw;
+    @media screen and (min-width: 1280px) {
+      flex-direction: row;
+    }
+  
     > div {
       flex: 1 0 50%;
+      width: 100%;
+      max-height: inherit;
+      //margin: 30px auto;
+      &.links {
+        margin-top: 0;
+      }
+      &.employee-login {
+        margin-bottom: 0;
+      }
+      @media screen and (min-width: 768px) {
+        max-height: 260px;
+        &.links {
+          margin-top: 30px;
+        }
+      }
+
     }
     
     li a:hover {
       background-color: transparent;
     }
+    .header {
+      margin-bottom: 15px;
+    }
   
     .employee-login {
       height: 100%;
-      max-height: 260px;
+      //max-height: 260px;
       min-height: 260px;
       font-size: 16px;
       overflow: hidden;
       
       .employee-wrapper {
         padding: 40px;
-
+        min-height: 260px;
         background-color: @cnm-gold;
         font-family: sans-serif;
         font-size: 22px;
-        line-height: 22px;
         .header {
           background-color: @cnm-md-blue;
           color: white;
@@ -120,6 +161,7 @@ section.cover  {
           a {
             color: white;
             text-decoration: none;
+            line-height: 32px;
             &:hover {
               text-decoration: underline;
               background-color: transparent;
@@ -132,8 +174,12 @@ section.cover  {
       flex: 1 0 100%;
       a {
         color: white;
-        text-shadow: 0px 0px 5px rgba(25, 25, 25, 1);
-        margin-left: 50%;
+        text-shadow: 0px 0px 5px rgba(0, 25, 25, 1);
+        width: 100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
       }
     }
   }
