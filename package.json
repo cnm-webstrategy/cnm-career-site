@@ -1,5 +1,5 @@
 {
-  "name": "unmjobs-careersite",
+  "name": "cnmjobs-careersite",
   "version": "1.0.0",
   "description": "",
   "main": "Gulpfile.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@bitbucket.cnm.edu:EAS/unmjobs-careersite.git"
+    "url": "git@github.com:cnm-webstrategy/cnm-career-site.git"
   },
   "author": "",
   "license": "ISC",
