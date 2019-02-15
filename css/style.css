@@ -1,4 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Lato');
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(https://fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWw.ttf) format('truetype');
+}
 /*!
  * Default theme for Pingendo 
  * Homepage: http://pingendo.com  
@@ -1296,7 +1301,7 @@ small,
 mark,
 .mark {
   background-color: #f8d9ac;
-  padding: .2em;
+  padding: 0.2em;
 }
 .text-left {
   text-align: left;
@@ -4815,7 +4820,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .label {
   display: inline;
-  padding: .2em .6em .3em;
+  padding: 0.2em 0.6em 0.3em;
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
@@ -4823,7 +4828,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
 a.label:hover,
 a.label:focus {
@@ -7070,7 +7075,7 @@ a[id*='btnSearch']::after {
   color: #fff;
   padding: 30px 40px;
   margin-top: 0;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 .cnm-brand {
   font-family: "Gotham A", "Gotham B", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -7363,10 +7368,10 @@ section.cover .flex #help-link a {
 .careerSiteFooter btnmenu li div.column.mayHide {
   display: none;
 }
-.positions .flex .staff {
+.positions .flex a:first-child {
   margin-left: auto;
 }
-.positions .flex .faculty {
+.positions .flex a:last-child {
   margin-right: auto;
 }
 #apply-now-container {
