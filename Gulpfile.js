@@ -12,13 +12,15 @@ var config = {
     host: 'www01',
     port: 22,
     username: 'webuser',
-    privateKey: fs.readFileSync('/Users/bwalch/.ssh/id_rsa')
+    /* NOTE this file is needed to finish the task, but it wont actually move the generated files
+    to the server unless the sshkey is set up on the server. */
+    privateKey: fs.readFileSync('/Users/bwalch/.ssh/www01_rsa')
 }
 
 var gulpSSH = new GulpSSH({
     ignoreErrors: false,
     sshConfig: config
-})
+});
 
 gulp.task('less', function (done) {
     var processors = [
