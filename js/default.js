@@ -41,7 +41,7 @@ $(document).ready(function () {
         '               <div class="employee-login">\n' +
         '    <ul class="employee-wrapper">\n' +
         '        <div class="header">Are you...</div>\n' +
-        '            <li><a href="https://cnm.csod.com/samldefault.aspx?ouid=3">A Current CNM Employee?</a></li>\n' +
+        '            <li><a href="https://cnm.csod.com/samldefault.aspx?ouid=4">A Current CNM Employee?</a></li>\n' +
         '            <li><a href=" https://cnm.csod.com/ats/careersite/search.aspx?site=7&amp;c=cnm">A Current Student Employee or Former CNM Employee?</a></li>\n' +
         '            <li><a href="https://cnm.csod.com/ats/careersite/search.aspx?site=7&amp;c=cnm">A New Applicant to CNM?</a></li>\n' +
         '    </ul>\n' +
@@ -138,8 +138,8 @@ $(document).ready(function () {
 
             get CNMSSOIDP() {
                 // return 'https://loboauth.cnm.edu/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252F'+this.ENV+'.csod.com%26RelayState%3D'+this.relayStateURL;
-                //console.log('https://cnm.csod.com/samldefault.aspx?ouid=3&returnUrl=' + this.relayStateURL)
-                return 'https://cnm.csod.com/samldefault.aspx?ouid=3&returnUrl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253d22';
+                //console.log('https://cnm.csod.com/samldefault.aspx?ouid=4&returnUrl=' + this.relayStateURL)
+                return 'https://cnm.csod.com/samldefault.aspx?ouid=4&returnUrl=%252fDeepLink%252fProcessRedirect.aspx%253fmodule%253d22';
             },
 
             //uses above functions to send user to Single Sign On page with the appropriate relay state URL to apply for this position in the Career Center

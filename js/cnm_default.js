@@ -79,7 +79,7 @@ if (page == "JobDetails.aspx" || page == "jobdetails.aspx"){
 
 			get CNMSSOIDP () {
 				// return 'https://loboauth.cnm.edu/adfs/ls/idpinitiatedsignon.aspx?RelayState=RPID%3Dhttps%253A%252F%252F'+this.ENV+'.csod.com%26RelayState%3D'+this.relayStateURL;
-				return 'https://<portalname>.csod.com/samldefault.aspx?ouid=3&returnUrl= ';
+				return 'https://<portalname>.csod.com/samldefault.aspx?ouid=4&returnUrl= ';
 			},
 
 			//uses above functions to send user to Single Sign On page with the appropriate relay state URL to apply for this position in the Career Center
