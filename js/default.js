@@ -181,13 +181,13 @@ $(document).ready(function () {
         //load job ad css
         $(".careerSite").append('<link rel="stylesheet" type="text/css" href="https://cnm.edu/ext/cornerstone_resources/style.css">');
 
-        $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', function () {
-            console.log("got jquery");
+        // $.getScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js', function () {
+            // console.log("got jquery");
             $.getScript('https://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js', function () {
                 $("#content").html('');
                 console.log("got bootstrap");
-            })
+            });
 
-        });
+        // });
     }
 });
